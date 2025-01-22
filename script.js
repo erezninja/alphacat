@@ -36,4 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         .bounce {
- 
+            animation: bounce 1s;
+        }
+    `;
+    document.head.appendChild(style);
+});
