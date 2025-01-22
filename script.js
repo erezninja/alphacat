@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.querySelector('.animate-button');
+    // Select the button with the correct class
+    const button = document.querySelector('.button_popup');
 
+    // Add click event to the button
     button.addEventListener('click', () => {
         button.classList.add('bounce');
         setTimeout(() => {
@@ -8,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     });
 
+    // Add hover effect for images
     const images = document.querySelectorAll('.content .image img');
     images.forEach(image => {
         image.addEventListener('mouseover', () => {
@@ -18,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add bounce animation keyframes dynamically
-    const styleSheet = document.styleSheets[0];
-    styleSheet.insertRule(`
+    // Dynamically add bounce animation styles
+    const style = document.createElement('style');
+    style.innerHTML = `
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
@@ -32,11 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 transform: translateY(-10px);
             }
         }
-    `, styleSheet.cssRules.length);
-
-    styleSheet.insertRule(`
         .bounce {
-            animation: bounce 1s;
-        }
-    `, styleSheet.cssRules.length);
-});
+ 
