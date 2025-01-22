@@ -49,6 +49,7 @@
 
 <footer>
     <p>&copy; 2025 AlphaCat. All rights reserved.</p>
+    <p>Version 1.0. Random ID: <span id="version-id"></span></p>
     <div class="footer-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
@@ -56,6 +57,11 @@
     </div>
 </footer>
 
+<script>
+    // Generate a random 6-digit number
+    const randomId = Math.floor(100000 + Math.random() * 900000);
+    document.getElementById('version-id').textContent = randomId;
+</script>
 <script src="script.js"></script>
 </body>
 </html>
