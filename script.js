@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     });
 
+    const images = document.querySelectorAll('.content .image img');
+    images.forEach(image => {
+        image.addEventListener('mouseover', () => {
+            image.style.filter = 'brightness(1.2)';
+        });
+        image.addEventListener('mouseout', () => {
+            image.style.filter = 'brightness(1)';
+        });
+    });
+
     // Add bounce animation keyframes dynamically
     const styleSheet = document.styleSheets[0];
     styleSheet.insertRule(`
